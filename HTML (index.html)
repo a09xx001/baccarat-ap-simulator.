@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>百家樂 CP/AP 策略模擬器</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px; }
+    h1 { color: #333; text-align: center; }
+    input, button { padding: 10px; margin: 10px 0; font-size: 16px; width: 100%; }
+    .results { margin-top: 20px; font-size: 18px; }
+    .log { font-family: monospace; background: #fff; padding: 10px; border: 1px solid #ccc; height: 300px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+
+  <h1>百家樂 CP/AP 策略模擬器</h1>
+
+  <label for="rounds">輸入模擬局數：</label>
+  <input type="number" id="rounds" value="1000" min="1" max="10000">
+  <button onclick="simulateMultipleRounds()">開始模擬</button>
+
+  <div class="results">
+    <p>莊家勝率：<span id="bankerWinPct">0%</span></p>
+    <p>閒家勝率：<span id="playerWinPct">0%</span></p>
+    <p>無明顯優勢：<span id="neutralPct">0%</span></p>
+  </div>
+
+  <div class="log" id="log"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
