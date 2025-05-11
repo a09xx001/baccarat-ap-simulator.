@@ -1,1 +1,1 @@
-# baccarat-ap-simulator.
+# baccarat-ap-simulator
